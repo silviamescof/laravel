@@ -16,8 +16,12 @@
                     <!-- Add other details as needed -->
 
                     <a href="{{ url('/catalog') }}" class="btn btn-primary">< Volver al catalogo</a>
-                    <a href="{{ url('/catalog') }}" class="btn btn-primary">Editar película</a>
-                    <a href="{{ url('/catalog') }}" class="btn btn-primary">Devolver pelicula</a>
+                    <a href="{{ route('edit', ['id' => $movie->id]) }}" class="btn btn-primary">Editar pelicula</a>
+                    @if($movie->rented)
+                        <a href="{{ route('entregar', ['id' => $movie->id]) }}" class="btn btn-danger">Devolver pelicula</a>
+                    @else
+                        <a href="{{ route('alquilar', ['id' => $movie->id]) }}" class="btn btn-success">Alquilar pelicula</a>
+                    @endif
                 </div>
             </div>
         </div>

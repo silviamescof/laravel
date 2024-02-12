@@ -7,9 +7,29 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./../css/auth.css">
     <title>Hello, world!</title>
+    <style>
+      body {
+        background: linear-gradient(to bottom,#3089c4, #176db9);
+        color: rgb(9, 9, 9);
+      }
+      
+      .pelicula a{
+        color: rgb(9, 9, 9);
+      }
+      .pelicula img{
+        border:solid rgb(5, 5, 5) 3px;
+        width: 100%;
+        height: 400px;
+      }
+      .pelicula img:hover{
+        transform: translateY(-5px);
+      }
+    </style>
   </head>
+
+
   <body>
     @include('navbar')
     <div class="container">
